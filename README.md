@@ -35,7 +35,7 @@ All local paths are relative, so the site also works at a repository subdirector
 ## Customize
 
 - **Colors:** edit the CSS custom properties at the top of `style.css`. Initial bead colors also appear in `index.html` and the reset function in `script.js`.
-- **Text and links:** edit the matching sections in `index.html`. Replace the explicit college, Instagram, website, and logo placeholders before the event. No affiliation-specific contact details have been invented.
+- **Text and links:** edit the matching sections in `index.html`. The About section links to the official Girls Who Code organization website at https://girlswhocode.com/.
 - **Questions:** edit the `bugs` and `logic` arrays in `script.js`; `correct` is the zero-based answer index. Each bank cycles through all five questions.
 - **Illustration:** edit `.computer` and its child styles in `style.css`.
 
