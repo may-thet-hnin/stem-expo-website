@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Make a binary bracelet, solve coding challenges, and start your coding adventure. A Girls Who Code playground for OCGS Stem Expo.">
+  <meta name="theme-color" content="#faf7ff">
+  <title>Code Your Adventure! | Girls Who Code</title>
+  <link rel="stylesheet" href="./style.css"><script src="./script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav class="nav wrap" aria-label="Main navigation">
+  <a class="brand" href="#home"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span> Code Your Adventure<span class="brand-star">✦</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰ <span>Menu</span></button>
+  <div id="nav-links" class="nav-links"><a href="#home">Home</a><a href="#bracelet">Binary Bracelet</a><a href="#challenges">Coding Challenges</a><a href="#playground">Coding Playground</a><a href="#about">About Us</a><a class="button small" href="#bracelet">Start Coding! ↗</a></div>
+</nav></header>
+<main id="main">
+<section id="home" class="hero wrap">
+  <div class="hero-copy"><p class="eyebrow badge"><span aria-hidden="true">✦</span> GIRLS WHO CODE × OCGS Stem Expo</p>
+  <h1>Hey, Future<br><span>Coder!</span> <span class="heart" aria-hidden="true">♥</span></h1>
+  <p class="hero-description">Ready to turn your ideas into code? Explore, create, and discover the magic of computer science!</p>
+  <div class="actions"><a class="button" href="#bracelet">Start Coding <span aria-hidden="true">↗</span></a><a class="button secondary" href="#playground">🎮 Explore Games</a></div>
+  <p class="micro">No experience needed. Just bring your curiosity.</p></div>
+  <div class="hero-art" role="img" aria-label="A lavender computer displaying print Hello, World with a heart, surrounded by stars and binary digits">
+    <span class="float binary b1">01001000</span><span class="float sparkle s1">✦</span><span class="float pixel-heart">♥</span>
+    <div class="computer"><div class="screen"><div class="screen-bar"><i></i><i></i><i></i><span>my-first-adventure.py</span></div><div class="screen-code"><span class="comment"># big ideas start here</span><br><span class="code-pink">print</span>(<span class="code-yellow">"Hello, World! 💗"</span>)<br><span class="cursor">▌</span></div><div class="screen-sticker">you can build anything ✦</div></div><div class="computer-chin">✦</div><div class="stand"></div><div class="base"></div></div>
+    <span class="float binary b2">101010</span><span class="float sparkle s2">✧</span><div class="art-note">a little curiosity.<br>a whole lot of possibility.</div>
+  </div>
+</section>
+<div class="welcome wrap"><a href="#bracelet"><span class="tile pink">♡</span><div><h2>Create</h2><p>Turn your name into binary code.</p></div><span>↗</span></a><a href="#challenges"><span class="tile lavender">⌘</span><div><h2>Solve</h2><p>Challenge your coding brain.</p></div><span>↗</span></a><a href="#playground"><span class="tile blue">⚑</span><div><h2>Play</h2><p>Find your next coding adventure.</p></div><span>↗</span></a></div>
+<section id="bracelet" class="section bracelet-section"><div class="wrap">
+  <div class="section-heading"><p class="eyebrow">01 / MAKE SOMETHING UNIQUELY YOU</p><h2>Code Your Name! <span aria-hidden="true">♡</span></h2><p>Computers speak in 0s and 1s. Turn your name into a secret code—and a bracelet!</p></div>
+  <div class="converter-layout"><aside class="binary-intro"><span class="large-icon">01</span><h3>Two digits.<br>Endless possibilities.</h3><p><strong>Binary</strong> represents information using just <strong>0</strong> and <strong>1</strong>. Each digit is a <strong>bit</strong>.</p><p>In this activity, each uppercase letter has a special code of <strong>8 bits</strong>. One bit = one bead!</p><div class="tip">✦ Expo tip<br><strong>Try your initials for a shorter bracelet.</strong></div></aside>
+  <div class="converter card"><div class="card-top"><span class="pill">YOUR BRACELET STUDIO</span><span aria-hidden="true">✦</span></div>
+    <label for="name">Enter your name or initials</label><input id="name" type="text" placeholder="Type your name here..." maxlength="24" autocomplete="off" spellcheck="false" aria-describedby="name-help input-feedback">
+    <p id="name-help" class="hint">A–Z only · Up to 24 letters · Lowercase becomes uppercase</p><p id="input-feedback" class="feedback" aria-live="polite"></p>
+    <div class="color-controls"><h3>Pick your bead colors</h3><label><input type="color" id="zero-color" value="#c7aff0"> Color for <strong>0</strong></label><label><input type="color" id="one-color" value="#f39ac2"> Color for <strong>1</strong></label></div>
+    <div class="bracelet-output" id="bracelet-output" aria-label="Binary bracelet preview"><p class="empty">Your next creation starts with a letter.<br><span>Type above to see your binary beads ✨</span></p></div>
+    <div class="legend"><span><i id="zero-swatch"></i> 0 bead</span><span><i id="one-swatch"></i> 1 bead</span><span>Read left to right →</span></div>
+    <div class="actions"><button id="copy" class="button" disabled>Copy My Binary Code ⧉</button><button id="reset" class="text-button">Start Over ↻</button></div><p id="copy-status" class="feedback" role="status"></p>
+    <textarea id="copy-fallback" readonly hidden aria-label="Your binary code. Select and copy this text."></textarea>
+    <p class="privacy">♧ Just on your device. Your name is never saved or sent.</p>
+  </div></div>
+  <details class="alphabet card"><summary>📖 View Binary Alphabet (A–Z) <span>+</span></summary><p class="hint">Uppercase ASCII · 8 bits per letter</p><div id="alphabet-grid"></div></details>
+</div></section>
+<section id="challenges" class="section wrap"><div class="section-heading"><p class="eyebrow">02 / A LITTLE CHALLENGE. A BIG CONFIDENCE BOOST.</p><h2>Level Up Your Coding Skills! ✦</h2><p>Ready for a challenge? Put your coding brain to the test!</p></div>
+  <div class="progress-panel"><span>Your adventure progress</span><span id="stars" aria-label="0 of 3 challenges completed">☆ ☆ ☆</span><progress id="progress" max="3" value="0">0 of 3</progress><span id="progress-label">0 / 3 challenges</span></div>
+  <div id="quiz-grid" class="quiz-grid"></div>
+  <div id="reward" class="reward" hidden><span aria-hidden="true">🏆</span><h3>Coding Superstar!</h3><p>You completed the coding challenges! Keep creating, experimenting, and exploring!</p></div>
+</section>
+<section id="playground" class="section playground-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">03 / KEEP THAT CURIOSITY GOING</p><h2>Your Coding Adventure Continues! 🎮</h2><p>Make games, animations, and cool projects with these free coding websites.</p></div>
+<div class="resource-grid">
+<article class="resource peach"><span class="resource-icon">🐈</span><p class="eyebrow">IMAGINE + CREATE</p><h3>Scratch</h3><p>Create your own games, animations, and interactive stories!</p><p class="activity">Try it: Animate your name.</p><a href="https://scratch.mit.edu" target="_blank" rel="noopener noreferrer">Start Creating ↗<span class="sr-only"> on Scratch (opens in a new tab)</span></a></article>
+<article class="resource blue"><span class="resource-icon">{ }</span><p class="eyebrow">PUZZLE + DISCOVER</p><h3>Code.org</h3><p>Learn coding through fun puzzles and interactive activities!</p><p class="activity">Try it: Explore an Hour of Code.</p><a href="https://code.org" target="_blank" rel="noopener noreferrer">Start Learning ↗<span class="sr-only"> on Code.org (opens in a new tab)</span></a></article>
+<article class="resource lavender"><span class="resource-icon">👾</span><p class="eyebrow">BUILD + PLAY</p><h3>MakeCode Arcade</h3><p>Build your very own pixel-style video games!</p><p class="activity">Try it: Make a character move.</p><a href="https://arcade.makecode.com" target="_blank" rel="noopener noreferrer">Make a Game ↗<span class="sr-only"> on Microsoft MakeCode Arcade (opens in a new tab)</span></a></article>
+<article class="resource mint"><span class="resource-icon">🧩</span><p class="eyebrow">CONNECT + SOLVE</p><h3>Blockly Games</h3><p>Play puzzles while learning how coding works!</p><p class="activity">Try it: Start with Puzzle, then Maze.</p><a href="https://blockly.games" target="_blank" rel="noopener noreferrer">Play Now ↗<span class="sr-only"> on Blockly Games (opens in a new tab)</span></a></article>
+</div><p class="external-note">These links open other websites in a new tab. Ask a trusted grown-up before creating an account.</p></div></section>
+<section id="about" class="section wrap about"><div class="about-art" aria-hidden="true"><span>&lt; girls who code /&gt;</span><div>♡</div><p>curiosity → creativity → possibility</p></div><div><p class="eyebrow">A COMMUNITY FOR YOUR BIG IDEAS</p><h2>Girls Who Code 💜</h2><p>We're a college Girls Who Code club passionate about making computer science fun, creative, and accessible to everyone. We believe that anyone can learn to code, create amazing things, and make a difference through technology!</p><p><strong>Thank you for visiting us at the OCGS Stem Expo!</strong></p><p class="closing">The future of tech is yours to create! 🚀</p><details class="club-details"><summary>Our club details · coming soon</summary><p>College name: [Add college name]<br>Club Instagram: [Add club Instagram]<br>Club website: [Add club website]<br>Club logo: [Add club logo]</p></details></div></section>
+</main><footer class="wrap"><a class="brand" href="#home"><span class="brand-icon">&lt;/&gt;</span> Code Your Adventure</a><p>Made with 💗 by Girls Who Code</p><a href="#home">Back to top ↑</a></footer>
+</body></html>
